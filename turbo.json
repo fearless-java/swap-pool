@@ -3,7 +3,7 @@
 	"ui": "tui",
 	"tasks": {
 		"build": {
-			"dependsOn": ["^build", "typecheck"],
+			"dependsOn": ["^build"],
 			"outputs": [".next/**", "!.next/cache/**", "dist/**", "build/**"],
 			"cache": true
 		},
@@ -22,9 +22,6 @@
 		"typecheck": {
 			"dependsOn": ["^typecheck"],
 			"cache": true
-		},
-		"type-check": {
-			"dependsOn": ["typecheck"]
 		},
 		"test": {
 			"dependsOn": ["typecheck"],

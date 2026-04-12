@@ -17,15 +17,19 @@
 			"persistent": true
 		},
 		"lint": {
-			"dependsOn": ["^lint"]
+			"dependsOn": ["^lint"],
+			"cache": true,
+			"outputs": []
 		},
 		"typecheck": {
 			"dependsOn": ["^typecheck"],
-			"cache": true
+			"cache": true,
+			"outputs": []
 		},
 		"test": {
 			"dependsOn": ["typecheck"],
-			"cache": true
+			"cache": true,
+			"outputs": ["coverage/**"]
 		},
 		"clean": {
 			"cache": false

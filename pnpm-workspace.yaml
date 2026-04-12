@@ -1,3 +1,28 @@
 packages:
   - 'apps/*'
   - 'packages/*'
+
+catalog:
+  # TypeScript
+  "typescript": "^5"
+  "@types/node": "^20"
+
+  # React
+  "react": "^19"
+  "react-dom": "^19"
+  "@types/react": "^19"
+  "@types/react-dom": "^19"
+
+  # Next.js
+  "next": "16.1.6"
+
+  # UI & Styling
+  "tailwindcss": "^4"
+  "@tailwindcss/postcss": "^4"
+  "@biomejs/biome": "latest"
+
+  # Web3 (apps/web specific)
+  "wagmi": "latest"
+  "viem": "latest"
+  "@tanstack/react-query": "latest"
+  "zustand": "latest"

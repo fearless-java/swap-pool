@@ -1,8 +1,7 @@
 {
 	"extends": "../../packages/typescript-config/nextjs.json",
 	"compilerOptions": {
-		"types": ["node"],
-		"noImplicitAny": false
+		"types": ["node"]
 	},
 	"include": [
 		"next-env.d.ts",

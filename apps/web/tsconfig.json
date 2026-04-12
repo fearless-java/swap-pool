@@ -1,7 +1,12 @@
 {
 	"extends": "../../packages/typescript-config/nextjs.json",
 	"compilerOptions": {
-		"types": ["node"]
+		"types": ["node"],
+		"paths": {
+			"@/*": ["./src/*", "../../packages/ui/src/*"],
+			"@sushiswap/ui": ["../../packages/ui/src"],
+			"@sushiswap/ui/*": ["../../packages/ui/src/*"]
+		}
 	},
 	"include": [
 		"next-env.d.ts",

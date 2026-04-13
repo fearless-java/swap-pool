@@ -8,13 +8,14 @@
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "start": "turbo start",
-    "typecheck": "turbo typecheck",
-    "lint": "turbo lint",
-    "test": "turbo test",
-    "clean": "turbo clean"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "typecheck": "turbo run typecheck",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
     "turbo": "^2.3.3",

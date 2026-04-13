@@ -1,0 +1,47 @@
+{
+  "name": "@sushiswap/core",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./evm": {
+      "import": "./dist/evm/index.js",
+      "types": "./dist/evm/index.d.ts"
+    },
+    "./svm": {
+      "import": "./dist/svm/index.js",
+      "types": "./dist/svm/index.d.ts"
+    },
+    "./stellar": {
+      "import": "./dist/stellar/index.js",
+      "types": "./dist/stellar/index.d.ts"
+    },
+    "./chain": {
+      "import": "./dist/chain/index.js",
+      "types": "./dist/chain/index.d.ts"
+    },
+    "./currency": {
+      "import": "./dist/currency/index.js",
+      "types": "./dist/currency/index.d.ts"
+    },
+    "./constants": {
+      "import": "./dist/constants/index.js",
+      "types": "./dist/constants/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {},
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

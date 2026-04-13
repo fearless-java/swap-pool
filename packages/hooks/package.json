@@ -1,0 +1,36 @@
+{
+  "name": "@sushiswap/hooks",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --external react --external wagmi --external viem",
+    "clean": "rm -rf dist",
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch"
+  },
+  "dependencies": {
+    "wagmi": "^2.14.0",
+    "viem": "^2.21.0"
+  },
+  "devDependencies": {
+    "@sushiswap/core": "workspace:*",
+    "@types/react": "^18.3.0",
+    "react": "^18.3.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.5.0"
+  },
+  "peerDependencies": {
+    "react": "^18.3.0",
+    "wagmi": "^2.14.0",
+    "viem": "^2.21.0"
+  }
+}

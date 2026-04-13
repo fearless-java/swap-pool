@@ -199,7 +199,7 @@ export async function getJupiterPrices(mints: string[]): Promise<JupiterPriceRes
 export const SOLANA_TOKENS = {
   NATIVE_SOL: "So11111111111111111111111111111111111111112",
   USDC: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-  USDT: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+  USDT: "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
   wSOL: "So11111111111111111111111111111111111111112",
   BONK: "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
 } as const

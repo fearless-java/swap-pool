@@ -43,3 +43,24 @@ export function shortenAddress(address: string, chars = 4): string {
 export function getTokenId(chainId: number, address: string): string {
   return `${chainId}:${address.toLowerCase()}`
 }
+
+/**
+ * Format a string amount with specified decimal places
+ * @param amount - String representation of amount (e.g., "1000000")
+ * @param decimals - Number of decimal places to show
+ */
+export function formatAmount(amount: string, decimals: number): string {
+  const num = parseFloat(amount)
+  if (isNaN(num)) return "0"
+
+  const divisor = Math.pow(10, decimals)
+  const result = num / divisor
+
+  if (result === 0) return "0"
+  if (result < 0.0001) return result.toExponential(2)
+
+  return result.toLocaleString(undefined, {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: decimals > 6 ? 6 : decimals,
+  })
+}

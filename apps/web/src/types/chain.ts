@@ -1,26 +1,29 @@
 /**
  * Chain ID type definitions for multi-chain support
+ * Compatible with @sushiswap/core types
  */
 
-// EVM Chain IDs
+// EVM Chain IDs - compatible with @sushiswap/core
+// Note: Using named keys for internal use while EvmChainId type is compatible with @sushiswap/core
 export const EVM_CHAIN_IDS = {
   mainnet: 1,
   polygon: 137,
   arbitrum: 42161,
   optimism: 10,
   base: 8453,
-  avalanche: 43114,
-  zkSync: 324,
-  linea: 59144,
+  sepolia: 11155111,
 } as const
 
-export type EvmChainId = (typeof EVM_CHAIN_IDS)[keyof typeof EVM_CHAIN_IDS]
+// Import EvmChainId type from @sushiswap/core for internal use and re-export for compatibility
+import type { EvmChainId } from '@sushiswap/core/evm'
+export type { EvmChainId }
 
 // Solana Chain ID (using cluster name for identification)
+// Updated to match @sushiswap/core naming convention
 export const SVM_CHAIN_IDS = {
-  mainnet: "mainnet",
-  devnet: "devnet",
-  testnet: "testnet",
+  solana: "solana",
+  solanaDevnet: "solana-devnet",
+  solanaTestnet: "solana-testnet",
 } as const
 
 export type SvmChainId = (typeof SVM_CHAIN_IDS)[keyof typeof SVM_CHAIN_IDS]
@@ -45,7 +48,5 @@ export const CHAIN_NAMES: Record<number, string> = {
   [EVM_CHAIN_IDS.arbitrum]: "Arbitrum",
   [EVM_CHAIN_IDS.optimism]: "Optimism",
   [EVM_CHAIN_IDS.base]: "Base",
-  [EVM_CHAIN_IDS.avalanche]: "Avalanche",
-  [EVM_CHAIN_IDS.zkSync]: "zkSync",
-  [EVM_CHAIN_IDS.linea]: "Linea",
+  [EVM_CHAIN_IDS.sepolia]: "Sepolia",
 }
